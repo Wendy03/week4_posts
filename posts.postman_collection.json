@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "9c61ea81-a8c1-44cd-9d32-67d3fd2486af",
+		"name": "posts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得全部貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://serene-mesa-28430.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"serene-mesa-28430",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"新增貼文2\",\r\n    \"image\":\"https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80\",\r\n    \"user\": \"626ebfa24c66b199a8e003bb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serene-mesa-28430.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"serene-mesa-28430",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除全部貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://serene-mesa-28430.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"serene-mesa-28430",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://serene-mesa-28430.herokuapp.com/posts/:id",
+					"protocol": "https",
+					"host": [
+						"serene-mesa-28430",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "626fd94a63c25682012cd89c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"編輯貼文\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serene-mesa-28430.herokuapp.com/posts/:id",
+					"protocol": "https",
+					"host": [
+						"serene-mesa-28430",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "626fdb43c87970810a17c4d7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
